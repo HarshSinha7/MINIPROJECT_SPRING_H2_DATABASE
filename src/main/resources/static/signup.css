@@ -1,0 +1,156 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --text-dark: #2d3748;
+    --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    --input-bg: #f7fafc;
+    --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== GLOBAL SETTINGS ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-dark);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ===== CARD DESIGN ===== */
+.card {
+    background: #ffffff;
+    padding: 40px 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card h2 {
+    margin: 0 0 25px;
+    font-weight: 700;
+    font-size: 26px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== INPUTS ===== */
+form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 14px;
+    background: var(--input-bg);
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+form input::placeholder {
+    color: #a0aec0;
+}
+
+/* ===== BUTTON ===== */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== LINKS ===== */
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #718096;
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-link a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===== MESSAGES ===== */
+.error-msg {
+    background: #fff5f5;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    display: block;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.text-danger {
+    color: #e63946;           /* Strong red */
+    font-size: 0.9rem;        /* Slightly smaller than regular text */
+    font-weight: 600;         /* Semi-bold for emphasis */
+    margin-top: 4px;          /* Small spacing from input */
+    display: block;           /* Forces it to appear on its own line */
+    letter-spacing: 0.3px;    /* Slightly cleaner look */
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+/* Smooth appearance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
